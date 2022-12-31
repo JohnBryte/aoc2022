@@ -2,15 +2,13 @@ package day02;
 
 enum EPlay {
 
-    ROCK ( "X", 1),
-    PAPER ("Y", 2),
-    SCISSOR ("Z", 3);
+    ROCK ( 1),
+    PAPER (2),
+    SCISSOR (3);
 
-    private String symbol = "";
-    private int value = 0;
+    private final int value;
 
-    EPlay(String symbol, int value) {
-        this.symbol = symbol;
+    EPlay(int value) {
         this.value = value;
     }
 

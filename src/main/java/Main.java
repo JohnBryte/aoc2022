@@ -4,11 +4,7 @@ import day03.Day03;
 import day04.Day04;
 import utils.InputReader;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
 
 public class Main {
 

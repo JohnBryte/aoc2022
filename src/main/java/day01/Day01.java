@@ -2,17 +2,13 @@ package day01;
 
 import utils.Day;
 import utils.IPuzzleSolver;
-import utils.InputReader;
-
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Day01 extends Day implements IPuzzleSolver {
 
-    public Day01(List<String> input) throws FileNotFoundException {
+    public Day01(List<String> input) {
         super(input);
     }
 

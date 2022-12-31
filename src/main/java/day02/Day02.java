@@ -3,14 +3,11 @@ package day02;
 import utils.Day;
 import utils.IPuzzleSolver;
 
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Day02 extends Day implements IPuzzleSolver {
 
-    public Day02(List<String> input) throws FileNotFoundException {
+    public Day02(List<String> input) {
         super(input);
     }
 
@@ -38,7 +35,7 @@ public class Day02 extends Day implements IPuzzleSolver {
             EPlay enemy = EPlay.getEnemy(plays[0]);
             String play = plays[1];
             assert enemy != null;
-            EPlay player = null;
+            EPlay player;
             if (play.equals("X")) {
                 player = EPlay.getLoss(enemy);
             } else if (play.equals("Y")) {

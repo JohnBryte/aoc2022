@@ -6,13 +6,12 @@ import utils.IPuzzleSolver;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class Day03 extends Day implements IPuzzleSolver {
 
-    private String POINTS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private final String POINTS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    public Day03(List<String> input) throws FileNotFoundException {
+    public Day03(List<String> input) {
         super(input);
     }
 

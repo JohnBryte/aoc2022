@@ -3,11 +3,10 @@ package day04;
 import utils.Day;
 import utils.IPuzzleSolver;
 
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Day04 extends Day implements IPuzzleSolver {
-    public Day04(List<String> input) throws FileNotFoundException {
+    public Day04(List<String> input) {
         super(input);
     }
 
