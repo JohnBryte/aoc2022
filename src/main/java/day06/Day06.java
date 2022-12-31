@@ -3,8 +3,6 @@ package day06;
 import utils.Day;
 
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class Day06 extends Day {
     public Day06(List<String> input) {

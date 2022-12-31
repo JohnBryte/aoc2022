@@ -1,3 +1,4 @@
+import Day07.Day07;
 import day01.Day01;
 import day02.Day02;
 import day03.Day03;
@@ -35,8 +36,12 @@ public class Main {
         System.out.println("Day05 Part2: " + day.solvePart2());
 
         day = new Day06(inputReader.readInput("day06"));
-        System.out.println("Day05 Part1: " + day.solvePart1());
-        System.out.println("Day05 Part2: " + day.solvePart2());
+        System.out.println("Day06 Part1: " + day.solvePart1());
+        System.out.println("Day06 Part2: " + day.solvePart2());
+
+        day = new Day07(inputReader.readInput("day07"));
+        System.out.println("Day07 Part1: " + day.solvePart1());
+        System.out.println("Day07 Part2: " + day.solvePart2());
     }
 
 }
