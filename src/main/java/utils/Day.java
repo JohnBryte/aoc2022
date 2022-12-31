@@ -2,7 +2,7 @@ package utils;
 
 import java.util.List;
 
-public abstract class Day {
+public abstract class Day implements IPuzzleSolver {
     public List<String> input;
 
     public Day(List<String> input) {

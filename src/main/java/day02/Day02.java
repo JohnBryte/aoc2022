@@ -1,11 +1,10 @@
 package day02;
 
 import utils.Day;
-import utils.IPuzzleSolver;
 
 import java.util.List;
 
-public class Day02 extends Day implements IPuzzleSolver {
+public class Day02 extends Day {
 
     public Day02(List<String> input) {
         super(input);

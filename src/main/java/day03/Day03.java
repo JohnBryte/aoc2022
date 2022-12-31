@@ -1,13 +1,10 @@
 package day03;
 
 import utils.Day;
-import utils.IPuzzleSolver;
-
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Day03 extends Day implements IPuzzleSolver {
+public class Day03 extends Day {
 
     private final String POINTS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
