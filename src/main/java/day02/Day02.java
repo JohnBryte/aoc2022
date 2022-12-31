@@ -1,5 +1,6 @@
 package day02;
 
+import utils.Day;
 import utils.IPuzzleSolver;
 
 import java.io.FileNotFoundException;
@@ -7,12 +8,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Day02 implements IPuzzleSolver {
-
-    List<String> input = new ArrayList<>();
+public class Day02 extends Day implements IPuzzleSolver {
 
     public Day02(List<String> input) throws FileNotFoundException {
-        this.input = input;
+        super(input);
     }
 
     @Override

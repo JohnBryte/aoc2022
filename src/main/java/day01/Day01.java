@@ -1,5 +1,6 @@
 package day01;
 
+import utils.Day;
 import utils.IPuzzleSolver;
 import utils.InputReader;
 
@@ -9,12 +10,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Day01 implements IPuzzleSolver {
-
-    List<String> input = new ArrayList<>();
+public class Day01 extends Day implements IPuzzleSolver {
 
     public Day01(List<String> input) throws FileNotFoundException {
-        this.input = input;
+        super(input);
     }
 
     @Override
