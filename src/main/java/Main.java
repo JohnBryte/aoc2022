@@ -3,6 +3,7 @@ import day02.Day02;
 import day03.Day03;
 import day04.Day04;
 import day05.Day05;
+import day06.Day06;
 import utils.Day;
 import utils.InputReader;
 
@@ -31,6 +32,10 @@ public class Main {
         day = new Day05(inputReader.readInput("day05"));
         System.out.println("Day05 Part1: " + day.solvePart1());
         day = new Day05(inputReader.readInput("day05"));
+        System.out.println("Day05 Part2: " + day.solvePart2());
+
+        day = new Day06(inputReader.readInput("day06"));
+        System.out.println("Day05 Part1: " + day.solvePart1());
         System.out.println("Day05 Part2: " + day.solvePart2());
     }
 
