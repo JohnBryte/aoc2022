@@ -14,12 +14,12 @@ public class Day05 extends Day {
         List<String> crateInput = new ArrayList<>();
         for (int i = 0; i < input.size(); i++) {
             if (input.get(i).equals("")) {
-                parseInstructions(input.subList(i +1, input.size()));
+                parseInstructions(input.subList(i + 1, input.size()));
                 break;
             }
             crateInput.add(input.get(i));
         }
-        parseCrates(crateInput.subList(0, crateInput.size()-1));
+        parseCrates(crateInput.subList(0, crateInput.size() - 1));
     }
 
     private void parseInstructions(List<String> subList) {

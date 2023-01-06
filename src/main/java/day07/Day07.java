@@ -1,4 +1,4 @@
-package Day07;
+package day07;
 
 import utils.Day;
 
@@ -63,7 +63,7 @@ public class Day07 extends Day {
     public String solvePart2() {
         List<Long> directorySizes = getDirectorySizes();
         Long totalFileSIze = 70000000L;
-        long availableSpace = totalFileSIze - (directorySizes.get(directorySizes.size()-1));
+        long availableSpace = totalFileSIze - (directorySizes.get(directorySizes.size() - 1));
         Long spaceNeeded = 30000000 - availableSpace;
         return String.valueOf(directorySizes.stream().filter(value -> value >= spaceNeeded).min(Long::compareTo).orElse(-1L));
     }

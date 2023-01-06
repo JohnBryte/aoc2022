@@ -54,10 +54,10 @@ public class Day08 extends Day {
             treeCol[i] = Integer.parseInt(String.valueOf(input.get(i).charAt(col)));
         }
         int[] beforeTargetTree = Arrays.copyOfRange(treeCol, 0, row);
-        int[] afterTargetTree = Arrays.copyOfRange(treeCol, row+1, treeCol.length);
+        int[] afterTargetTree = Arrays.copyOfRange(treeCol, row + 1, treeCol.length);
 
         int beforeVisible = 0;
-        for (int i = beforeTargetTree.length-1; i >= 0; i--) {
+        for (int i = beforeTargetTree.length - 1; i >= 0; i--) {
             if (beforeTargetTree[i] >= tree) {
                 beforeVisible++;
                 break;
@@ -85,10 +85,10 @@ public class Day08 extends Day {
         int[] treeRow = Arrays.stream(input.get(row).split("")).mapToInt(Integer::parseInt).toArray();
         //split array where target tree is
         int[] beforeTargetTree = Arrays.copyOfRange(treeRow, 0, col);
-        int[] afterTargetTree = Arrays.copyOfRange(treeRow, col+1, treeRow.length);
+        int[] afterTargetTree = Arrays.copyOfRange(treeRow, col + 1, treeRow.length);
         int beforeVisible = 0;
         if (beforeTargetTree.length > 0) {
-            for (int i = beforeTargetTree.length-1; i >= 0; i--) {
+            for (int i = beforeTargetTree.length - 1; i >= 0; i--) {
                 if (beforeTargetTree[i] >= tree) {
                     beforeVisible++;
                     break;
@@ -117,7 +117,7 @@ public class Day08 extends Day {
         int[] treeRow = Arrays.stream(input.get(row).split("")).mapToInt(Integer::parseInt).toArray();
 
         int[] beforeTargetTree = Arrays.copyOfRange(treeRow, 0, col);
-        int[] afterTargetTree = Arrays.copyOfRange(treeRow, col+1, treeRow.length);
+        int[] afterTargetTree = Arrays.copyOfRange(treeRow, col + 1, treeRow.length);
         if (beforeTargetTree.length == 0 || afterTargetTree.length == 0) {
             //is edge
             return true;
@@ -135,7 +135,7 @@ public class Day08 extends Day {
 
 
         int[] beforeTargetTree = Arrays.copyOfRange(treeCol, 0, row);
-        int[] afterTargetTree = Arrays.copyOfRange(treeCol, row+1, treeCol.length);
+        int[] afterTargetTree = Arrays.copyOfRange(treeCol, row + 1, treeCol.length);
         if (beforeTargetTree.length == 0 || afterTargetTree.length == 0) {
             //is edge
             return true;

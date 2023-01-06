@@ -21,7 +21,7 @@ public class Day03 extends Day {
             String secondHalf = rucksack.substring(index);
             for (int i = 0; i < POINTS.length(); i++) {
                 if (firstHalf.indexOf(POINTS.charAt(i)) != -1 &&  secondHalf.indexOf(POINTS.charAt(i)) != -1) {
-                    result += i +1;
+                    result += i + 1;
                 }
             }
         }
@@ -41,7 +41,7 @@ public class Day03 extends Day {
             }
             for (int i = 0; i < POINTS.length(); i++) {
                 if (rucksacks.get(0).indexOf(POINTS.charAt(i)) != -1 && rucksacks.get(1).indexOf(POINTS.charAt(i)) != -1 && rucksacks.get(2).indexOf(POINTS.charAt(i)) != -1) {
-                    result += i+1;
+                    result += i + 1;
                 }
             }
             counter = 0;

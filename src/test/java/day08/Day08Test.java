@@ -1,6 +1,5 @@
 package day08;
 
-import Day07.Day07;
 import org.junit.jupiter.api.Test;
 import utils.InputReader;
 

@@ -17,7 +17,7 @@ public class Day01 extends Day {
         int max = 0;
         int counter = 0;
         for (String calories : input) {
-            if (calories.equals("") || counter == input.size()-1) {
+            if (calories.equals("") || counter == input.size() - 1) {
                 if (currentMax > max) {
                     max = currentMax;
                 }
@@ -42,7 +42,7 @@ public class Day01 extends Day {
                 currentSum = 0;
                 counter++;
                 continue;
-            } else if (counter == input.size()-1) {
+            } else if (counter == input.size() - 1) {
                 currentSum += Integer.parseInt(calories);
                 sumOfAllElves.add(currentSum);
                 continue;
