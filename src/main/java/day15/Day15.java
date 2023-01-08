@@ -37,26 +37,18 @@ public class Day15 extends Day {
             populateSensorList(line);
         }
 
-        List<Integer> match = new ArrayList<>();
-        boolean found = false;
         for (Sensor sensor : sensorList) {
             Set<List<Integer>> outline = sensor.calculateOutline(limit);
             for (List<Integer> outlineCoordinate : outline) {
                 if (sensorList.stream().noneMatch(s -> s.isInDistance(outlineCoordinate))) {
 //                    System.out.println("X: " + outlineCoordinate.get(0) + ", Y: " + outlineCoordinate.get(1));
-                    match = outlineCoordinate;
-                    found = true;
-                    break;
+                    long x = outlineCoordinate.get(0);
+                    long y = outlineCoordinate.get(1);
+                    return String.valueOf(BigInteger.valueOf(x * 4000000 + y));
                 }
             }
-            if (found) {
-                break;
-            }
         }
-
-        long x = match.get(0);
-        long y = match.get(1);
-        return String.valueOf(BigInteger.valueOf(x * 4000000 + y));
+        return "Failed to find solution";
     }
 
     private Sensor populateSensorList(String line) {

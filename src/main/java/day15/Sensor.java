@@ -17,17 +17,15 @@ public class Sensor {
         this.distance = Math.abs(beaconCoordinates.get(0) - sensorCoordinates.get(0)) + Math.abs(beaconCoordinates.get(1) - sensorCoordinates.get(1));
     }
 
-    public void calculateCoveredPositionsAtHeight(int targetYCoordinate, Set<Integer> foo) {
+    public void calculateCoveredPositionsAtHeight(int targetYCoordinate, Set<Integer> coveredXCoordinates) {
         if (isInRange(targetYCoordinate)) {
             //only consider and store X coordinates
             if (targetYCoordinate >= sensorCoordinates.get(1)) {
                 int remaining = Math.abs(distance - (targetYCoordinate - sensorCoordinates.get(1)));
-                Set<Integer> coveredCoordinates = calculateCoordinates(remaining, targetYCoordinate);
-                foo.addAll(coveredCoordinates);
+                calculateCoordinates(remaining, targetYCoordinate, coveredXCoordinates);
             } else {
                 int remaining = Math.abs(distance - (sensorCoordinates.get(1) - targetYCoordinate));
-                Set<Integer> coveredCoordinates = calculateCoordinates(remaining, targetYCoordinate);
-                foo.addAll(coveredCoordinates);
+                calculateCoordinates(remaining, targetYCoordinate, coveredXCoordinates);
             }
         }
     }
@@ -74,13 +72,12 @@ public class Sensor {
         }
     }
 
-    private Set<Integer> calculateCoordinates(int remaining, int targetYCoordinate) {
-        Set<Integer> result = new HashSet<>();
+    private void calculateCoordinates(int remaining, int targetYCoordinate, Set<Integer> coveredXCoordinates) {
+//        Set<Integer> result = new HashSet<>();
         Integer xCoordinate = this.sensorCoordinates.get(0);
         for (int i = xCoordinate - remaining; i <= xCoordinate + remaining; i++) {
-            result.add(i);
+            coveredXCoordinates.add(i);
         }
-        return result;
     }
 
     private boolean isInRange(int targetYCoordinate) {
